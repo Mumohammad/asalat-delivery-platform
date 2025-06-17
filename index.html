@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asalat Altafasil - Delivery Driver Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <div class="logo3">
+                <img src="Images/logo3.PNG">
+                    
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link active" data-page="home" data-translate="home">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link" data-page="about" data-translate="about">About Us</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link" data-page="register" data-translate="register">Register</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link" data-page="contact" data-translate="contact">Contact</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link" data-page="login" data-translate="login">Login</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__actions">
+                <button class="language-toggle" id="language-toggle">
+                    <span class="lang-text">عربي</span>
+                </button>
+                <button class="nav__toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Page -->
+        <section id="home-page" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__content">
+                        <h1 class="hero__title" data-translate="heroTitle">Your Journey to Earnings Starts Here</h1>
+                        <p class="hero__subtitle" data-translate="heroSubtitle">Drive for Hungerstation and Jahez - One application, two leading platforms</p>
+                        <div class="hero__buttons">
+                            <button class="btn btn--primary btn--lg" data-page="register" data-translate="registerNow">Register to Drive Today</button>
+                            <button class="btn btn--outline btn--lg" data-page="about" data-translate="learnMore">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="hero__image">
+                        <div class="hero-visual">
+                            <div class="delivery-icon">🏍️</div>
+                            <div class="platform-logos">
+                                <span class="platform-badge">Hungerstation</span>
+                                <span class="platform-badge">Jahez</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="container">
+                    <h2 class="section-title" data-translate="whyChooseUs">Why Choose Us?</h2>
+                    <div class="features__grid">
+                        <div class="feature-card">
+                            <div class="feature-card__icon">📝</div>
+                            <h3 class="feature-card__title" data-translate="simplifiedRegistration">Simplified Registration</h3>
+                            <p class="feature-card__description" data-translate="simplifiedRegistrationDesc">A single form to apply for both Hungerstation and Jahez</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-card__icon">⚡</div>
+                            <h3 class="feature-card__title" data-translate="fasterOnboarding">Faster Onboarding</h3>
+                            <p class="feature-card__description" data-translate="fasterOnboardingDesc">Our expertise ensures quick approval</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-card__icon">💰</div>
+                            <h3 class="feature-card__title" data-translate="maximizedEarnings">Maximized Earnings</h3>
+                            <p class="feature-card__description" data-translate="maximizedEarningsDesc">Access to wider pool of orders</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-card__icon">🎧</div>
+                            <h3 class="feature-card__title" data-translate="dedicatedSupport">Dedicated Support</h3>
+                            <p class="feature-card__description" data-translate="dedicatedSupportDesc">24/7 assistance from our team</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- About Page -->
+        <section id="about-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title" data-translate="ourMission">Empowering Saudi Arabia's Delivery Heroes</h1>
+                </div>
+                <div class="about-content">
+                    <div class="about-section">
+                        <h2 data-translate="missionTitle">Our Mission</h2>
+                        <p data-translate="missionText">At Asalat Altafasil, our mission is to empower the driving force of Saudi Arabia's rapidly growing delivery sector. We understand the ambition and hard work of individuals seeking flexible and rewarding work.</p>
+                    </div>
+                    <div class="about-section">
+                        <h2 data-translate="whoWeAreTitle">Who We Are</h2>
+                        <p data-translate="whoWeAreText">We are a team of logistics and technology professionals based in Riyadh, passionate about creating opportunities within the local economy. We have cultivated strong relationships with major delivery platforms.</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label" data-translate="registeredDrivers">Registered Drivers</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label" data-translate="approvalRate">Approval Rate</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label" data-translate="support">Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Register Page -->
+        <section id="register-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title" data-translate="becomePartner">Become a Delivery Partner</h1>
+                    <p class="page-subtitle" data-translate="registrationSubtitle">Complete the form below to start your journey</p>
+                </div>
+                
+                <form class="registration-form" id="registration-form">
+                    <!-- Personal Details -->
+                    <div class="form-section">
+                        <h3 class="form-section-title" data-translate="personalDetails">Personal Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" data-translate="fullName">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-translate="nationalId">National ID / Iqama Number</label>
+                                <input type="text" class="form-control" id="nationalId" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" data-translate="mobileNumber">Mobile Number</label>
+                                <input type="tel" class="form-control" id="mobileNumber" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-translate="cityOfOperation">City of Operation</label>
+                                <select class="form-control" id="cityOfOperation" required>
+                                    <option value="">Select City</option>
+                                    <option value="riyadh">Riyadh</option>
+                                    <option value="jeddah">Jeddah</option>
+                                    <option value="dammam">Dammam</option>
+                                    <option value="mecca">Mecca</option>
+                                    <option value="medina">Medina</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Details -->
+                    <div class="form-section">
+                        <h3 class="form-section-title" data-translate="vehicleDetails">Vehicle Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" data-translate="vehicleMake">Vehicle Make and Model</label>
+                                <input type="text" class="form-control" id="vehicleMake" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-translate="yearOfManufacture">Year of Manufacture</label>
+                                <input type="number" class="form-control" id="yearOfManufacture" min="2010" max="2025" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Platform Preference -->
+                    <div class="form-section">
+                        <h3 class="form-section-title" data-translate="platformPreference">Platform Preference</h3>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="platform" value="hungerstation">
+                                <span class="checkmark"></span>
+                                Hungerstation
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="platform" value="jahez">
+                                <span class="checkmark"></span>
+                                Jahez
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="platform" value="both">
+                                <span class="checkmark"></span>
+                                Both
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Work Type -->
+                    <div class="form-section">
+                        <h3 class="form-section-title" data-translate="workType">Work Type</h3>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="workType" value="freelance">
+                                <span class="radio-mark"></span>
+                                <span data-translate="freelance">Freelance</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="workType" value="sponsorship">
+                                <span class="radio-mark"></span>
+                                <span data-translate="sponsorship">Sponsorship</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Document Upload -->
+                    <div class="form-section">
+                        <h3 class="form-section-title" data-translate="documentUpload">Document Upload</h3>
+                        <div class="upload-grid">
+                            <div class="upload-item">
+                                <label class="upload-label" data-translate="nationalIdCopy">Copy of National ID / Iqama</label>
+                                <input type="file" class="upload-input" accept=".pdf,.jpg,.png">
+                                <div class="upload-area">
+                                    <span class="upload-text" data-translate="clickToUpload">Click to upload</span>
+                                </div>
+                            </div>
+                            <div class="upload-item">
+                                <label class="upload-label" data-translate="drivingLicenseCopy">Copy of Driving License</label>
+                                <input type="file" class="upload-input" accept=".pdf,.jpg,.png">
+                                <div class="upload-area">
+                                    <span class="upload-text" data-translate="clickToUpload">Click to upload</span>
+                                </div>
+                            </div>
+                            <div class="upload-item">
+                                <label class="upload-label" data-translate="vehicleRegistration">Vehicle Registration (Istimara)</label>
+                                <input type="file" class="upload-input" accept=".pdf,.jpg,.png">
+                                <div class="upload-area">
+                                    <span class="upload-text" data-translate="clickToUpload">Click to upload</span>
+                                </div>
+                            </div>
+                            <div class="upload-item">
+                                <label class="upload-label" data-translate="vehicleInsurance">Vehicle Insurance</label>
+                                <input type="file" class="upload-input" accept=".pdf,.jpg,.png">
+                                <div class="upload-area">
+                                    <span class="upload-text" data-translate="clickToUpload">Click to upload</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Submit -->
+                    <div class="form-section">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" required>
+                            <span class="checkmark"></span>
+                            <span data-translate="agreeTerms">I agree to the Terms and Conditions and Privacy Policy</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--lg btn--full-width" data-translate="submitApplication">Submit Application</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title" data-translate="getInTouch">Get in Touch</h1>
+                    <p class="page-subtitle" data-translate="contactSubtitle">Have questions? We're here to help</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3 data-translate="email">Email</h3>
+                                <p>support@asalat-altafasil.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h3 data-translate="phone">Phone</h3>
+                                <p>+966 11 XXX XXXX</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h3 data-translate="address">Address</h3>
+                                <p>King Fahd Road, Riyadh, Saudi Arabia</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-details">
+                                <h3 data-translate="businessHours">Business Hours</h3>
+                                <p>Sunday - Thursday: 9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label class="form-label" data-translate="name">Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-translate="email">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-translate="subject">Subject</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-translate="message">Message</label>
+                            <textarea class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--lg" data-translate="sendMessage">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Page -->
+        <section id="login-page" class="page">
+            <div class="container">
+                <div class="login-container">
+                    <div class="login-tabs">
+                        <button class="login-tab active" data-tab="admin" data-translate="adminLogin">Admin Login</button>
+                        <button class="login-tab" data-tab="driver" data-translate="driverLogin">Driver Login</button>
+                    </div>
+                    
+                    <div class="login-forms">
+                        <form class="login-form active" id="admin-login">
+                            <h2 data-translate="adminDashboard">Admin Dashboard</h2>
+                            <div class="form-group">
+                                <label class="form-label" data-translate="username">Username</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-translate="password">Password</label>
+                                <input type="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width" data-translate="login">Login</button>
+                        </form>
+                        
+                        <form class="login-form" id="driver-login">
+                            <h2 data-translate="driverDashboard">Driver Dashboard</h2>
+                            <div class="form-group">
+                                <label class="form-label" data-translate="username">Username</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-translate="password">Password</label>
+                                <input type="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width" data-translate="login">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Dashboard -->
+        <section id="admin-dashboard" class="dashboard">
+            <div class="dashboard-header">
+                <h1 data-translate="adminDashboard">Admin Dashboard</h1>
+                <div class="dashboard-actions">
+                    <button class="btn btn--outline" id="logout-btn" data-translate="logout">Logout</button>
+                </div>
+            </div>
+            
+            <div class="dashboard-nav">
+                <nav class="dashboard-nav-links">
+                    <a href="#" class="dashboard-nav-link active" data-section="overview" data-translate="overview">Overview</a>
+                    <a href="#" class="dashboard-nav-link" data-section="drivers" data-translate="drivers">Drivers</a>
+                    <a href="#" class="dashboard-nav-link" data-section="analytics" data-translate="analytics">Analytics</a>
+                    <a href="#" class="dashboard-nav-link" data-section="reports" data-translate="reports">Reports</a>
+                    <a href="#" class="dashboard-nav-link" data-section="upload" data-translate="dataUpload">Data Upload</a>
+                    <a href="#" class="dashboard-nav-link" data-section="settings" data-translate="settings">Settings</a>
+                </nav>
+            </div>
+
+            <div class="dashboard-content">
+                <!-- Overview Section -->
+                <div class="dashboard-section active" id="admin-overview">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>1,234</h3>
+                            <p data-translate="totalDrivers">Total Drivers</p>
+                            <span class="stat-trend positive">+12%</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>856</h3>
+                            <p data-translate="activeDrivers">Active Drivers</p>
+                            <span class="stat-trend positive">+8%</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>42</h3>
+                            <p data-translate="pendingApplications">Pending Applications</p>
+                            <span class="stat-trend negative">-3%</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>SR 45,678</h3>
+                            <p data-translate="monthlyRevenue">Monthly Revenue</p>
+                            <span class="stat-trend positive">+15%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <h3 data-translate="registrationTrends">Registration Trends</h3>
+                        <canvas id="registrationChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+
+                <!-- Drivers Section -->
+                <div class="dashboard-section" id="admin-drivers">
+                    <div class="section-header">
+                        <h3 data-translate="driverManagement">Driver Management</h3>
+                        <button class="btn btn--primary" data-translate="exportData">Export Data</button>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th data-translate="name">Name</th>
+                                    <th data-translate="id">ID</th>
+                                    <th data-translate="city">City</th>
+                                    <th data-translate="platform">Platform</th>
+                                    <th data-translate="status">Status</th>
+                                    <th data-translate="actions">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="drivers-table-body">
+                                <tr>
+                                    <td>Ahmed Al-Rashid</td>
+                                    <td>1234567890</td>
+                                    <td>Riyadh</td>
+                                    <td>Both</td>
+                                    <td><span class="status status--success">Active</span></td>
+                                    <td>
+                                        <button class="btn btn--sm btn--outline">View</button>
+                                        <button class="btn btn--sm btn--secondary">Edit</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Analytics Section -->
+                <div class="dashboard-section" id="admin-analytics">
+                    <h3 data-translate="analyticsReports">Analytics & Reports</h3>
+                    <div class="analytics-grid">
+                        <div class="chart-card">
+                            <h4 data-translate="platformDistribution">Platform Distribution</h4>
+                            <canvas id="platformChart" width="300" height="300"></canvas>
+                        </div>
+                        <div class="chart-card">
+                            <h4 data-translate="cityDistribution">City Distribution</h4>
+                            <canvas id="cityChart" width="300" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reports Section -->
+                <div class="dashboard-section" id="admin-reports">
+                    <h3 data-translate="reports">Reports</h3>
+                    <div class="reports-grid">
+                        <div class="report-card">
+                            <h4 data-translate="monthlyReport">Monthly Report</h4>
+                            <p data-translate="monthlyReportDesc">Driver performance and earnings summary</p>
+                            <button class="btn btn--primary" data-translate="generatePDF">Generate PDF</button>
+                        </div>
+                        <div class="report-card">
+                            <h4 data-translate="vatReport">VAT Report</h4>
+                            <p data-translate="vatReportDesc">Tax calculations and compliance report</p>
+                            <button class="btn btn--primary" data-translate="generatePDF">Generate PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Upload Section -->
+                <div class="dashboard-section" id="admin-upload">
+                    <h3 data-translate="dataUpload">Data Upload</h3>
+                    <div class="upload-section">
+                        <div class="upload-card">
+                            <h4 data-translate="partnerDataUpload">Partner Data Upload</h4>
+                            <p data-translate="uploadExcelDesc">Upload Excel files from delivery partners for analysis</p>
+                            <div class="upload-area large">
+                                <input type="file" id="excel-upload" accept=".xlsx,.xls" class="upload-input">
+                                <div class="upload-content">
+                                    <div class="upload-icon">📊</div>
+                                    <p data-translate="dragExcelFile">Drag Excel file here or click to browse</p>
+                                    <span class="upload-note" data-translate="supportedFormats">Supported formats: .xlsx, .xls</span>
+                                </div>
+                            </div>
+                            <button class="btn btn--primary" data-translate="analyzeData">Analyze Data</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Section -->
+                <div class="dashboard-section" id="admin-settings">
+                    <h3 data-translate="settings">Settings</h3>
+                    <div class="settings-grid">
+                        <div class="setting-card">
+                            <h4 data-translate="notifications">Notifications</h4>
+                            <div class="setting-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    <span data-translate="emailNotifications">Email Notifications</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    <span data-translate="smsNotifications">SMS Notifications</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <span data-translate="whatsappNotifications">WhatsApp Notifications</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="setting-card">
+                            <h4 data-translate="integrations">Integrations</h4>
+                            <div class="integration-status">
+                                <div class="integration-item">
+                                    <span>Supabase Database</span>
+                                    <span class="status status--success">Connected</span>
+                                </div>
+                                <div class="integration-item">
+                                    <span>EmailJS</span>
+                                    <span class="status status--success">Connected</span>
+                                </div>
+                                <div class="integration-item">
+                                    <span>Twilio SMS</span>
+                                    <span class="status status--warning">Pending</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Driver Dashboard -->
+        <section id="driver-dashboard" class="dashboard">
+            <div class="dashboard-header">
+                <h1 data-translate="driverDashboard">Driver Dashboard</h1>
+                <div class="dashboard-actions">
+                    <button class="btn btn--outline" id="driver-logout-btn" data-translate="logout">Logout</button>
+                </div>
+            </div>
+            
+            <div class="dashboard-nav">
+                <nav class="dashboard-nav-links">
+                    <a href="#" class="dashboard-nav-link active" data-section="profile" data-translate="profile">Profile</a>
+                    <a href="#" class="dashboard-nav-link" data-section="application" data-translate="applicationStatus">Application Status</a>
+                    <a href="#" class="dashboard-nav-link" data-section="documents" data-translate="documents">Documents</a>
+                    <a href="#" class="dashboard-nav-link" data-section="earnings" data-translate="earnings">Earnings</a>
+                    <a href="#" class="dashboard-nav-link" data-section="notifications" data-translate="notifications">Notifications</a>
+                </nav>
+            </div>
+
+            <div class="dashboard-content">
+                <!-- Profile Section -->
+                <div class="dashboard-section active" id="driver-profile">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <span>AH</span>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Ahmed Al-Rashid</h3>
+                            <p>ID: 1234567890</p>
+                            <span class="status status--success">Active Driver</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-stats">
+                        <div class="stat-card">
+                            <h4>4.8</h4>
+                            <p data-translate="rating">Rating</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>156</h4>
+                            <p data-translate="completedOrders">Completed Orders</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>SR 2,340</h4>
+                            <p data-translate="monthlyEarnings">Monthly Earnings</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Status Section -->
+                <div class="dashboard-section" id="driver-application">
+                    <h3 data-translate="applicationStatus">Application Status</h3>
+                    <div class="status-timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-icon">✓</div>
+                            <div class="timeline-content">
+                                <h4 data-translate="applicationSubmitted">Application Submitted</h4>
+                                <p>March 15, 2024</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item completed">
+                            <div class="timeline-icon">✓</div>
+                            <div class="timeline-content">
+                                <h4 data-translate="documentsVerified">Documents Verified</h4>
+                                <p>March 16, 2024</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <div class="timeline-icon">⏳</div>
+                            <div class="timeline-content">
+                                <h4 data-translate="partnerReview">Partner Review</h4>
+                                <p data-translate="inProgress">In Progress</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">⏳</div>
+                            <div class="timeline-content">
+                                <h4 data-translate="accountActivation">Account Activation</h4>
+                                <p data-translate="pending">Pending</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documents Section -->
+                <div class="dashboard-section" id="driver-documents">
+                    <h3 data-translate="documents">Documents</h3>
+                    <div class="documents-grid">
+                        <div class="document-card">
+                            <div class="document-icon">📄</div>
+                            <div class="document-info">
+                                <h4 data-translate="nationalId">National ID</h4>
+                                <span class="status status--success">Verified</span>
+                            </div>
+                            <button class="btn btn--sm btn--outline" data-translate="view">View</button>
+                        </div>
+                        <div class="document-card">
+                            <div class="document-icon">📄</div>
+                            <div class="document-info">
+                                <h4 data-translate="drivingLicense">Driving License</h4>
+                                <span class="status status--success">Verified</span>
+                            </div>
+                            <button class="btn btn--sm btn--outline" data-translate="view">View</button>
+                        </div>
+                        <div class="document-card">
+                            <div class="document-icon">📄</div>
+                            <div class="document-info">
+                                <h4 data-translate="vehicleRegistration">Vehicle Registration</h4>
+                                <span class="status status--warning">Pending</span>
+                            </div>
+                            <button class="btn btn--sm btn--primary" data-translate="reupload">Re-upload</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earnings Section -->
+                <div class="dashboard-section" id="driver-earnings">
+                    <h3 data-translate="earnings">Earnings</h3>
+                    <div class="earnings-summary">
+                        <div class="earnings-card">
+                            <h4>SR 2,340</h4>
+                            <p data-translate="thisMonth">This Month</p>
+                        </div>
+                        <div class="earnings-card">
+                            <h4>SR 12,450</h4>
+                            <p data-translate="totalEarnings">Total Earnings</p>
+                        </div>
+                    </div>
+                    <div class="earnings-chart">
+                        <canvas id="earningsChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+
+                <!-- Notifications Section -->
+                <div class="dashboard-section" id="driver-notifications">
+                    <h3 data-translate="notifications">Notifications</h3>
+                    <div class="notifications-list">
+                        <div class="notification-item unread">
+                            <div class="notification-icon">📢</div>
+                            <div class="notification-content">
+                                <h4 data-translate="documentApproved">Document Approved</h4>
+                                <p data-translate="drivingLicenseApproved">Your driving license has been approved</p>
+                                <span class="notification-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-icon">💰</div>
+                            <div class="notification-content">
+                                <h4 data-translate="paymentReceived">Payment Received</h4>
+                                <p data-translate="weeklyPayment">Weekly payment of SR 580 has been processed</p>
+                                <span class="notification-time">1 day ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <h3 data-translate="success">Success!</h3>
+            <p id="success-message" data-translate="applicationSubmitted">Your application has been submitted successfully.</p>
+            <button class="btn btn--primary" onclick="closeModal()" data-translate="ok">OK</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

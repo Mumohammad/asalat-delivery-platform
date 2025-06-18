@@ -3,7 +3,7 @@
  * Handles user authentication, registration, and session management
  */
 
-import { getSupabaseClient, supabaseUtils } from '../config/supabase.js';
+const { getSupabaseClient, supabaseUtils } = require('../config/supabase.js');
 
 class AuthService {
   constructor() {
@@ -452,5 +452,4 @@ class AuthService {
 // Create singleton instance
 const authService = new AuthService();
 
-export default authService;
-
+module.exports = authService;

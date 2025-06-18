@@ -7,7 +7,7 @@
  * Get environment configuration
  * @returns {Object} Configuration object
  */
-export function getEnvironmentConfig() {
+function getEnvironmentConfig() {
   // In a browser environment, we'll use a global config object
   // In production, these should be set during build time
   const config = {
@@ -70,7 +70,7 @@ function validateConfig(config) {
  * Check if running in development mode
  * @returns {boolean} Is development
  */
-export function isDevelopment() {
+function isDevelopment() {
   const config = getEnvironmentConfig();
   return config.environment === 'development';
 }
@@ -79,7 +79,7 @@ export function isDevelopment() {
  * Check if running in production mode
  * @returns {boolean} Is production
  */
-export function isProduction() {
+function isProduction() {
   const config = getEnvironmentConfig();
   return config.environment === 'production';
 }
@@ -88,7 +88,7 @@ export function isProduction() {
  * Check if running in test mode
  * @returns {boolean} Is test
  */
-export function isTest() {
+function isTest() {
   const config = getEnvironmentConfig();
   return config.environment === 'test';
 }
@@ -98,7 +98,7 @@ export function isTest() {
  * @param {string} feature - Feature name
  * @returns {boolean} Feature enabled status
  */
-export function isFeatureEnabled(feature) {
+function isFeatureEnabled(feature) {
   const config = getEnvironmentConfig();
   return config.features[feature] || false;
 }
@@ -107,7 +107,7 @@ export function isFeatureEnabled(feature) {
  * Get API base URL based on environment
  * @returns {string} API base URL
  */
-export function getApiBaseUrl() {
+function getApiBaseUrl() {
   const config = getEnvironmentConfig();
   return config.supabaseUrl;
 }
@@ -116,7 +116,7 @@ export function getApiBaseUrl() {
  * Get storage URL for file uploads
  * @returns {string} Storage URL
  */
-export function getStorageUrl() {
+function getStorageUrl() {
   const config = getEnvironmentConfig();
   return `${config.supabaseUrl}/storage/v1/object/public`;
 }
@@ -124,7 +124,7 @@ export function getStorageUrl() {
 /**
  * Configuration for different environments
  */
-export const environmentConfigs = {
+const environmentConfigs = {
   development: {
     debug: true,
     logLevel: 'debug',
@@ -151,7 +151,7 @@ export const environmentConfigs = {
  * Get environment-specific configuration
  * @returns {Object} Environment config
  */
-export function getEnvironmentSpecificConfig() {
+function getEnvironmentSpecificConfig() {
   const config = getEnvironmentConfig();
   return environmentConfigs[config.environment] || environmentConfigs.development;
 }
@@ -160,7 +160,7 @@ export function getEnvironmentSpecificConfig() {
  * Set configuration at runtime (for testing or dynamic config)
  * @param {Object} newConfig - New configuration values
  */
-export function setRuntimeConfig(newConfig) {
+function setRuntimeConfig(newConfig) {
   Object.keys(newConfig).forEach(key => {
     window[key.toUpperCase()] = newConfig[key];
   });
@@ -171,7 +171,7 @@ export function setRuntimeConfig(newConfig) {
  * This excludes sensitive server-side only values
  * @returns {Object} Client-safe configuration
  */
-export function getClientConfig() {
+function getClientConfig() {
   const config = getEnvironmentConfig();
   
   return {
@@ -190,7 +190,7 @@ export function getClientConfig() {
  * Initialize configuration from script tag or external source
  * This allows configuration to be injected at build time
  */
-export function initializeConfigFromScript() {
+function initializeConfigFromScript() {
   const configScript = document.getElementById('app-config');
   if (configScript) {
     try {
@@ -208,3 +208,18 @@ if (typeof window !== 'undefined') {
   initializeConfigFromScript();
 }
 
+// Export all functions
+module.exports = {
+  getEnvironmentConfig,
+  isDevelopment,
+  isProduction,
+  isTest,
+  isFeatureEnabled,
+  getApiBaseUrl,
+  getStorageUrl,
+  environmentConfigs,
+  getEnvironmentSpecificConfig,
+  setRuntimeConfig,
+  getClientConfig,
+  initializeConfigFromScript
+};

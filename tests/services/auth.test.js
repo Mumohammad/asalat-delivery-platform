@@ -2,16 +2,27 @@
  * Authentication Service Tests
  */
 
-import authService from '../../js/services/auth.js';
-import { mockSupabaseClient } from '../setup.js';
+const authService = require('../../js/services/auth.js');
+const { mockSupabaseClient } = require('../setup.js');
 
 describe('AuthService', () => {
   beforeEach(() => {
     global.testUtils.resetMocks();
+    
+    // Mock the client to avoid real Supabase calls
+    authService.client = mockSupabaseClient;
   });
 
   describe('initialize', () => {
     it('should initialize successfully', async () => {
+      // Mock the getSupabaseClient to return our mock
+      jest.doMock('../../js/config/supabase.js', () => ({
+        getSupabaseClient: () => mockSupabaseClient,
+        supabaseUtils: {
+          formatError: (error) => error.message
+        }
+      }));
+      
       await expect(authService.initialize()).resolves.not.toThrow();
     });
 
@@ -407,4 +418,3 @@ describe('AuthService', () => {
     });
   });
 });
-

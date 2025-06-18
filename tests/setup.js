@@ -3,7 +3,7 @@
  * Global test configuration and utilities
  */
 
-import '@testing-library/jest-dom';
+require('@testing-library/jest-dom');
 
 // Mock Supabase client for testing
 const mockSupabaseClient = {
@@ -304,5 +304,4 @@ afterEach(() => {
 });
 
 // Export mock client for use in tests
-export { mockSupabaseClient };
-
+module.exports = { mockSupabaseClient };

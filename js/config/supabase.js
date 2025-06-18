@@ -3,8 +3,8 @@
  * Handles Supabase client initialization and configuration management
  */
 
-import { createClient } from '@supabase/supabase-js';
-import { getEnvironmentConfig } from './environment.js';
+const { createClient } = require('@supabase/supabase-js');
+const { getEnvironmentConfig } = require('./environment.js');
 
 class SupabaseConfig {
   constructor() {
@@ -269,14 +269,11 @@ class SupabaseConfig {
 // Create singleton instance
 const supabaseConfig = new SupabaseConfig();
 
-// Export singleton instance and client getter
-export default supabaseConfig;
-
 /**
  * Get initialized Supabase client
  * @returns {Object} Supabase client
  */
-export const getSupabaseClient = () => {
+const getSupabaseClient = () => {
   return supabaseConfig.getClient();
 };
 
@@ -285,14 +282,14 @@ export const getSupabaseClient = () => {
  * @param {Object} options - Configuration options
  * @returns {Promise<Object>} Supabase client
  */
-export const initializeSupabase = async (options = {}) => {
+const initializeSupabase = async (options = {}) => {
   return await supabaseConfig.initialize(options);
 };
 
 /**
  * Utility functions for common operations
  */
-export const supabaseUtils = {
+const supabaseUtils = {
   /**
    * Check if error is authentication related
    * @param {Error} error - Error object
@@ -350,3 +347,10 @@ export const supabaseUtils = {
   }
 };
 
+// Export all functions and the default config
+module.exports = {
+  default: supabaseConfig,
+  getSupabaseClient,
+  initializeSupabase,
+  supabaseUtils
+};

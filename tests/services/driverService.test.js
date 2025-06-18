@@ -2,9 +2,9 @@
  * Driver Service Tests
  */
 
-import driverService from '../../js/services/driverService.js';
-import authService from '../../js/services/auth.js';
-import { mockSupabaseClient } from '../setup.js';
+const driverService = require('../../js/services/driverService.js');
+const authService = require('../../js/services/auth.js');
+const { mockSupabaseClient } = require('../setup.js');
 
 // Mock authService
 jest.mock('../../js/services/auth.js');
@@ -13,10 +13,21 @@ describe('DriverService', () => {
   beforeEach(() => {
     global.testUtils.resetMocks();
     authService.getCurrentUser.mockReturnValue(global.testUtils.createMockUser());
+    
+    // Mock the initialize method to avoid real Supabase calls
+    driverService.client = mockSupabaseClient;
   });
 
   describe('initialize', () => {
     it('should initialize successfully', async () => {
+      // Mock the getSupabaseClient to return our mock
+      jest.doMock('../../js/config/supabase.js', () => ({
+        getSupabaseClient: () => mockSupabaseClient,
+        supabaseUtils: {
+          formatError: (error) => error.message
+        }
+      }));
+      
       await expect(driverService.initialize()).resolves.not.toThrow();
     });
   });
@@ -408,4 +419,3 @@ describe('DriverService', () => {
     });
   });
 });
-

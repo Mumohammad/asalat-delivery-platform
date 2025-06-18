@@ -3,8 +3,8 @@
  * Handles driver registration, applications, and related operations
  */
 
-import { getSupabaseClient, supabaseUtils } from '../config/supabase.js';
-import authService from './auth.js';
+const { getSupabaseClient, supabaseUtils } = require('../config/supabase.js');
+const authService = require('./auth.js');
 
 class DriverService {
   constructor() {
@@ -548,5 +548,4 @@ class DriverService {
 // Create singleton instance
 const driverService = new DriverService();
 
-export default driverService;
-
+module.exports = driverService;
